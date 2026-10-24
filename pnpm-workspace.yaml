@@ -1,6 +1,7 @@
 packages:
   - freelens
   - packages/**
+  - web/*
 
 # Versions here are pinned exactly. Every workspace package resolves its
 # dependencies through this catalog, so the pinned version is what the app is

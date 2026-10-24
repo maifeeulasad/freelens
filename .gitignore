@@ -25,6 +25,10 @@ icon.iconset/
 /.playwright-mcp/
 /logs/
 
+# Reference repositories cloned for study by the web-app effort (see
+# web/README.md). Never committed.
+/.study/
+
 # Credentials and keys. Keep in sync with the Security section of AGENTS.md
 # and the permissions.deny rules in .claude/settings.json.
 .env
