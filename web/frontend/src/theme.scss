@@ -1,0 +1,96 @@
+/**
+ * Copyright (c) Freelens Authors. All rights reserved.
+ * Copyright (c) Maifee Ul Asad. All rights reserved.
+ * Licensed under MIT License. See LICENSE in root directory for more information.
+ */
+
+/*
+ * Freelens design tokens for the web app. The layout variables mirror
+ * packages/core/src/renderer/components/app.scss and the color tokens mirror
+ * the "Dark" theme in
+ * packages/core/src/renderer/themes/lens-dark.injectable.ts, which is the
+ * source of truth. Shared Freelens components (e.g. @freelensapp/button) read
+ * these `var(--…)` tokens, so reproducing the contract here lets them render
+ * unchanged in the browser without pulling in the renderer's DI container.
+ */
+
+:root {
+  /* layout */
+  --unit: 8px;
+  --padding: var(--unit);
+  --margin: var(--unit);
+  --border-radius: 3px;
+  --font-main: "Roboto", "Helvetica", "Arial", sans-serif;
+  --font-monospace: "Lucida Console", Monaco, Consolas, monospace;
+  --font-size-small: calc(1.5 * var(--unit));
+  --font-size: calc(1.75 * var(--unit));
+  --font-size-big: calc(2 * var(--unit));
+  --font-weight-thin: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 500;
+
+  /* colors (Dark theme) */
+  --blue: #00a7a0;
+  --magenta: #c93dce;
+  --golden: #ffc63d;
+  --primary: #00a7a0;
+  --textColorPrimary: #8e9297;
+  --textColorSecondary: #a0a0a0;
+  --textColorTertiary: #909ba6;
+  --textColorAccent: #ffffff;
+  --textColorDimmed: #8e92978c;
+  --borderColor: #4c5053;
+  --borderFaintColor: #373a3e;
+  --mainBackground: #1e2124;
+  --secondaryBackground: #1e2125;
+  --contentColor: #262b2f;
+  --layoutBackground: #2e3136;
+  --sidebarBackground: #36393e;
+  --sidebarActiveColor: #ffffff;
+  --sidebarItemHoverBackground: #3a3e44;
+  --buttonPrimaryBackground: #00a7a0;
+  --buttonDefaultBackground: #414448;
+  --buttonLightBackground: #f1f1f1;
+  --buttonAccentBackground: #e85555;
+  --buttonDisabledBackground: #808080;
+  --tableBgcStripe: #2a2d33;
+  --tableBgcSelected: #383c42;
+  --tableHeaderBackground: #262b2f;
+  --tableHeaderColor: #ffffff;
+  --colorSuccess: #43a047;
+  --colorOk: #4caf50;
+  --colorInfo: #00a7a0;
+  --colorError: #ce3933;
+  --colorSoftError: #e85555;
+  --colorWarning: #ff9800;
+  --colorTerminated: #4c5053;
+  --inputControlBackground: #1e2125;
+  --inputControlBorder: #414448;
+  --inputControlHoverBorder: #474a4f;
+  --dialogBackground: #262b2f;
+  --boxShadow: #0000003a;
+  --scrollBarColor: #5f6064;
+  --hrColor: #ffffff0f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: var(--font-size);
+  color: var(--textColorPrimary);
+  background: var(--mainBackground);
+}
+
+a {
+  color: var(--primary);
+}

@@ -1,0 +1,183 @@
+/**
+ * Copyright (c) Freelens Authors. All rights reserved.
+ * Copyright (c) Maifee Ul Asad. All rights reserved.
+ * Licensed under MIT License. See LICENSE in root directory for more information.
+ */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 18px;
+  background: var(--sidebarBackground);
+  border-bottom: 1px solid var(--borderColor);
+
+  .brand {
+    font-weight: var(--font-weight-bold);
+    color: var(--textColorAccent);
+    font-size: var(--font-size-big);
+  }
+
+  .brand .accent {
+    color: var(--primary);
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  label {
+    color: var(--textColorSecondary);
+    font-size: var(--font-size-small);
+    margin-right: 6px;
+  }
+}
+
+.content {
+  flex: 1;
+  overflow: auto;
+  padding: 18px;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.panel {
+  background: var(--contentColor);
+  border: 1px solid var(--borderColor);
+  border-radius: var(--border-radius);
+  padding: 14px 16px;
+
+  h2 {
+    margin: 0 0 12px;
+    font-size: var(--font-size);
+    color: var(--textColorAccent);
+    font-weight: var(--font-weight-bold);
+  }
+
+  h3 {
+    margin: 18px 0 8px;
+    font-size: var(--font-size-small);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--textColorTertiary);
+  }
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 10px;
+
+  span {
+    font-size: var(--font-size-small);
+    color: var(--textColorSecondary);
+  }
+}
+
+select,
+input {
+  font-family: inherit;
+  font-size: var(--font-size);
+  color: var(--textColorAccent);
+  background: var(--inputControlBackground);
+  border: 1px solid var(--inputControlBorder);
+  border-radius: var(--border-radius);
+  padding: 7px 9px;
+  outline: none;
+
+  &:focus {
+    border-color: var(--inputControlHoverBorder);
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-small);
+
+  th {
+    text-align: left;
+    color: var(--tableHeaderColor);
+    background: var(--tableHeaderBackground);
+    padding: 7px 9px;
+    font-weight: var(--font-weight-bold);
+  }
+
+  td {
+    padding: 7px 9px;
+    border-top: 1px solid var(--borderFaintColor);
+    color: var(--textColorPrimary);
+    vertical-align: middle;
+  }
+
+  tr:nth-child(even) td {
+    background: var(--tableBgcStripe);
+  }
+}
+
+.row-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.pill {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  background: var(--buttonDefaultBackground);
+  color: var(--textColorAccent);
+
+  &.ok {
+    background: var(--colorOk);
+  }
+  &.warn {
+    background: var(--colorWarning);
+  }
+  &.err {
+    background: var(--colorError);
+  }
+}
+
+.reachable {
+  color: var(--colorOk);
+  font-family: var(--font-monospace);
+}
+
+.banner {
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  margin-bottom: 12px;
+  font-size: var(--font-size-small);
+
+  &.error {
+    background: color-mix(in srgb, var(--colorError) 25%, transparent);
+    color: #ffd9d7;
+    border: 1px solid var(--colorError);
+  }
+  &.info {
+    background: color-mix(in srgb, var(--colorInfo) 20%, transparent);
+    color: #d7fffe;
+    border: 1px solid var(--colorInfo);
+  }
+}
+
+.muted {
+  color: var(--textColorDimmed);
+  font-size: var(--font-size-small);
+}
